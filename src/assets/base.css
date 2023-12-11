@@ -1,0 +1,264 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --primary-color: rgba(255,159,13,1);
+  --disabled:rgba(255, 207, 134, 1);
+
+  --w-text-h: rgb(255,255,255);
+  --w-text-m: rgba(255,255,255,0.6);
+  --w-text-l: rgba(255,255,255,0.3);
+
+  --b-text-h: rgb(0,0,0);
+  --b-text-m: rgba(0,0,0,0.6);
+  --b-text-l: rgba(0,0,0,0.3);
+
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  font-size:10px
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --dark-symbol: var(--vt-c-black);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+
+  --text-h:var(--b-text-h);
+  --text-m:var(--b-text-m);
+  --text-l:var(--b-text-l);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --dark-symbol: var(--vt-c-white);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+
+    --text-h:var(--w-text-h);
+    --text-m:var(--w-text-m);
+    --text-l:var(--w-text-l);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button:hover{
+  cursor:pointer;
+}
+
+@media only screen and (min-width:1200px){
+  h1{
+    font-size: 5.0rem;
+  }
+  h2{
+    font-size: 4.6rem;
+  }
+  h3{
+    font-size: 4.2rem;
+  }
+  h4{
+    font-size: 3.8rem;
+  }
+  h5{
+    font-size: 3.4rem;
+  }
+  h6{
+    font-size: 3.0rem;
+  }
+  p, RouterLink, a, li, input, textarea, button {
+    font-size: 2.2rem;
+  }
+  :root{
+    --gap:2.2rem;
+    --m-padding:3.0rem;
+    --margin:10rem;
+    --sizer:4.2rem;
+  }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  h1{
+    font-size: 4.8rem;
+  }
+  h2{
+    font-size: 4.4rem;
+  }
+  h3{
+    font-size: 4.0rem;
+  }
+  h4{
+    font-size: 3.6rem;
+  }
+  h5{
+    font-size: 3.2rem;
+  }
+  h6{
+    font-size: 2.8rem;
+  }
+  p, RouterLink, a, li, input, textarea, button{
+    font-size: 2.0rem;
+  }
+  :root{
+    --gap:2.0rem;
+    --m-padding:2.8rem;
+    --margin:6.4rem;
+    --sizer:4.0rem;
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+  h1{
+    font-size: 4.6rem;
+  }
+  h2{
+    font-size: 4.2rem;
+  }
+  h3{
+    font-size: 3.8rem;
+  }
+  h4{
+    font-size: 3.4rem;
+  }
+  h5{
+    font-size: 3.0rem;
+  }
+  h6{
+    font-size: 2.6rem;
+  }
+  p, RouterLink, a, li, input, textarea, button{
+    font-size: 1.8rem;
+  }
+  :root{
+    --gap:1.8rem;
+    --m-padding:2.6rem;
+    --margin:4.2rem;
+    --sizer:3.8rem;
+  }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px){
+  h1{
+    font-size: 4.4rem;
+  }
+  h2{
+    font-size: 4.0rem;
+  }
+  h3{
+    font-size: 3.6rem;
+  }
+  h4{
+    font-size: 3.2rem;
+  }
+  h5{
+    font-size: 2.8rem;
+  }
+  h6{
+    font-size: 2.4rem;
+  }
+  p, RouterLink, a, li, input, textarea, button{
+    font-size: 1.6rem;
+  }
+  :root{
+    --gap:1.6rem;
+    --m-padding:2.4rem;
+    --margin:2.4rem;
+    --sizer:3.6rem;
+  }
+}
+
+@media only screen and (max-width:575px){
+  h1{
+    font-size: 4.2rem;
+  }
+  h2{
+    font-size: 3.8rem;
+  }
+  h3{
+    font-size: 3.4rem;
+  }
+  h4{
+    font-size: 3.0rem;
+  }
+  h5{
+    font-size: 2.6rem;
+  }
+  h6{
+    font-size: 2.2rem;
+  }
+  p, RouterLink, a, li, input, textarea, button{
+    font-size: 1.4rem;
+  }
+  :root{
+    --gap:1.4rem;
+    --m-padding:2.2rem;
+    --margin:1.6rem;
+    --sizer:3.4rem;
+  }
+}
+

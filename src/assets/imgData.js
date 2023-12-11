@@ -1,0 +1,85 @@
+export const heroBg = [
+    {
+      bgPic:'../src/assets/hero-bg/m-at601-pic.jpg',
+      priCol:'rgb(254,224,40)'
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-at602-pic.jpg',
+      priCol:'rgb(255,108,76)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-pejuswed-pic.jpg',
+      priCol:'rgb(254,228,201)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-wedding2-pic.jpg',
+      priCol:'rgb(254,228,201)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-wedrecp2-pic.jpg',
+      priCol:'rgb(254,228,201)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withaunt-pic.jpg',
+      priCol:'rgb(255,235,208)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withema-pic.jpg',
+      priCol:'rgb(177,247,255)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withema2-pic.jpg',
+      priCol:'rgb(251,114,122)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withema3-pic.jpg',
+      priCol:'rgb(228,117,149)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withfam-pic.jpg',
+      priCol:'rgb(244,196,120)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withfri-pic.jpg',
+      priCol:'rgb(239,216,198)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withhus-pic.jpg',
+      priCol:'rgb(129,232,251)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withhus5-pic.jpg',
+      priCol:'rgb(213,247,246)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withpeju-pic.jpg',
+      priCol:'rgb(129,138,177)',
+    },
+    {
+      bgPic:'../src/assets/hero-bg/m-withsis2-pic.jpg',
+      priCol:'rgb(255,177,140)',
+    }
+];
+
+export const heroPic  = [
+'../src/assets/hero-img/m-alone-pic.jpg',
+'../src/assets/hero-img/m-alone2-pic.jpg',
+'../src/assets/hero-img/m-alone3-pic.jpg',
+'../src/assets/hero-img/m-child1-pic.jpg',
+'../src/assets/hero-img/m-child2-pic.jpg',
+'../src/assets/hero-img/m-gym-pic.jpg',
+'../src/assets/hero-img/m-nurse-pic.jpg',
+'../src/assets/hero-img/m-single-native-pic.jpg',
+'../src/assets/hero-img/m-wedding1-pic.jpg',
+'../src/assets/hero-img/m-wedrecp1-pic.jpg',
+'../src/assets/hero-img/m-withaunt2-pic.jpg',
+'../src/assets/hero-img/m-withdad1-pic.jpg',
+'../src/assets/hero-img/m-withfri2-pic.jpg',
+'../src/assets/hero-img/m-withhus2-pic.jpg',
+'../src/assets/hero-img/m-withhus3-pic.jpg',
+'../src/assets/hero-img/m-withhus4-pic.jpg',
+'../src/assets/hero-img/m-withpeju2-pic.jpg',
+'../src/assets/hero-img/m-withpeju3-pic.jpg',
+'../src/assets/hero-img/m-withshades-pic.jpg',
+'../src/assets/hero-img/m-withsis-pic.jpg',
+];
