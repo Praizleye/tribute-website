@@ -75,17 +75,17 @@ main{
 
 
 .hero-header p{ 
-  color:var(--text-m);
+  color:var(--w-text-m);
   text-transform:uppercase;
   letter-spacing:0.5rem;
 }
 
 .hero-header .name{
-  color:var(--text-h);
+  color:var(--w-text-h);
 }
 
 .hero-header h2{
-  color:var(--text-h);
+  color:var(--w-text-h);
   text-transform:uppercase;
   font-weight:600;
   letter-spacing:0.15rem;

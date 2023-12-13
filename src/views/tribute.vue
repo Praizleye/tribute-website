@@ -7,9 +7,9 @@
         </div>
         <div class="form-wrapper">
             <form action="" v-show="isVisible">
-                <input type="text" name="writer-name" placeholder="Please Enter Your Name" id=""/>
-                <textarea name="tribute-text" id="" cols="30" row="6" placeholder="Please Enter Tribute"></textarea>
-                <button type="submit">submit</button>
+                <input type="text" name="writer-name" v-model="writerName" placeholder="Please Enter Your Name" id=""/>
+                <textarea name="tribute-text" id="" v-model="message" cols="30" row="6" placeholder="Please Enter Tribute"></textarea>
+                <button @submit.prevent="submit" type="submit">submit</button>
             </form>
             <button type="button" @click="isVisible = !isVisible" >
                 <span class="title">
@@ -73,16 +73,41 @@
 </style>
 <script>
     import triCard from '../components/triCard.vue';
+    import axios from 'axios';
 
     export default{
-        
+        data: ()=>{
+            return{
+                isVisible:false,
+                writerName:null,
+                message:null,
+                tributes:null,
+            }
+        },
+        methods:{
+            async submit(){
+                try{
+                    const response = await axios.post('',{
+                        name : this.writerName,
+                        message : this.message
+                    })
+                }catch(err){
+                    console.error(err);
+                }
+            }
+        },
         components:{
             triCard
         },
-        data:()=>{
-            return{
-                isVisible:false,
-            }
+        beforeMount:{
+            // ()=>{
+            //     try{
+            //         const response = await axios.get('');
+            //         this.tributes = response.data;
+            //     }catch(err){
+            //         console.error(err);
+            //     }
+            // }
         }
     }
 </script>

@@ -27,4 +27,7 @@
         text-transform:uppercase;
         color:var(--text-h);
     }
+    p{
+        color:var(--text-m);
+    }
 </style>
