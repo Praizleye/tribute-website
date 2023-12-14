@@ -41,42 +41,37 @@
     
     data:()=>{
       return{
-        i:0,
-        n:0,
-        disPic:heroPic[this.i],
+        disPic:null,
         picInterval:null,
         bgInterval:null,
-        disBg:heroBg[this.n].bgPic,
-        themeCol:heroBg[this.n].priCol,
+        disBg:null,
+        themeCol:null,
         counterCol:null,
+        i:0,
+        n:0,
       }
     },
-    mounted(){
-      
-      setInterval(()=>{
-        changeImg();
-      },7000);
-
-      setInterval(()=>{
-        changeBg();
-      },8000);
-    
+    beforeMount(){
+      this.disPic = heroPic[this.i];
+      this.disBg = heroBg[this.n].bgPic;
+      this.themeCol = heroBg[this.n].priCol;
     },
-    methods:{
-      changeImg(){
-        const max = heroPic.length;
+    mounted(){
+      let max = heroPic.length;
+      this.picInterval = setInterval(()=>{
         this.i = this.i < max ? this.i + 1 : 0 ;
         this.disPic = heroPic[this.i];
-      },
+      },45000);
 
-      changeBg(){
-        const max = heroBg.length;
+      let max2 = heroBg.length;
+      this.bgInterval = setInterval(()=>{
         this.n = this.n < max2 ? this.n + 1 : 0 ;
         this.disBg = heroBg[this.n].bgPic;
         this.themeCol = heroBg[this.n].priCol;
         this.counterCol = heroBg[this.n].opCol;
-      },
-    }
+      },17500);
+    
+    },
    
   }
 </script>
