@@ -18,8 +18,8 @@
         <div class="form-wrapper">
             <transition name="fade">
                 <form action="" v-show="isVisible">
-                    <input required type="text" name="writer-name" v-model="writerName" placeholder="Please Enter Your Name" id=""/>
-                    <textarea required name="tribute-text" id="" v-model="message" cols="30" row="6" placeholder="Please Enter Tribute"></textarea>
+                    <input type="text" name="writer-name" v-model="writerName" placeholder="Please Enter Your Name" id=""/>
+                    <textarea name="tribute-text" id="" v-model="message" cols="30" row="6" placeholder="Please Enter Tribute"></textarea>
                     <button @click.prevent="submit" type="submit" >submit</button>
                 </form>
             </transition>
@@ -84,10 +84,11 @@
     }
 
     .fade-enter-active, .fade-leave-active{
-        transition: all 0.5s;
+        transition: all 0.25s;
     }
 
-    .fade-enter, .fade-lave-to{
+    .fade-enter, .fade-leave-to{
+        transition: all 0.25s;
         opacity:0;
     }
 
@@ -95,7 +96,7 @@
         color:var(--text-m) !important;
         border: 0.3rem solid var(--color-border) !important;
         background-color: var(--color-background) !important;
-        transition: all 0.5s;
+        transition: all 0.25s;
     }
 
     .done-mess, .err-mess{
@@ -143,19 +144,23 @@
             }
         },
         methods:{
-            // async submit(){
+            async submit(){
             //     try{
             //         const response = await axios.post('',{
             //             name : this.writerName,
             //             message : this.message
             //         })
-            //          const status = response.status;
+            //          const status = await response.status;
             //          this.messDone = status >= 200 ? true : false;
             //          this.messErr = status >= 400 ? true : false;
+              this.isVisible = !this.isVisible;
+              this.writerName = null;
+              this.message = null;
+            //
             //     }catch(err){
             //         console.error(err);
             //     }
-            // }
+            }
         },
         components:{
             triCard
