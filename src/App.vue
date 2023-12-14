@@ -28,8 +28,8 @@
   </header>
   <main>
     <div class="links">
-      <RouterLink to="/bio" class="tab" :style="{color:`${themeCol}`}" @click="clicked">Bio</RouterLink>
-      <RouterLink to="/tribute"  class="tab" :style="{color:`${themeCol}`}" @click="clicked">Tributes</RouterLink>
+      <RouterLink to="/bio" class="tab" >Bio</RouterLink>
+      <RouterLink to="/tribute"  class="tab" >Tributes</RouterLink>
     </div>
     <RouterView></RouterView>
   </main>
@@ -46,6 +46,7 @@
         bgInterval:null,
         disBg:null,
         themeCol:null,
+        counterCol:null,
         i:0,
         n:0,
       }
@@ -67,9 +68,11 @@
         this.n = this.n < max2 ? this.n + 1 : 0 ;
         this.disBg = heroBg[this.n].bgPic;
         this.themeCol = heroBg[this.n].priCol;
+        this.counterCol = heroBg[this.n].opCol;
       },17500);
     
-    }
+    },
+   
   }
 </script>
 <style scoped>
