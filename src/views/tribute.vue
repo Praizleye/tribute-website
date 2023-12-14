@@ -146,7 +146,7 @@
         methods:{
             async submit(){
                 try{
-                    const response = await axios.post('https://klutherthon316.onrender.com',{
+                    const response = await axios.post('https://klutherthon316.onrender.com/api/tribute',{
                         name : this.writerName,
                         message : this.message
                     });
