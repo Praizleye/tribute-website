@@ -145,21 +145,22 @@
         },
         methods:{
             async submit(){
-            //     try{
-            //         const response = await axios.post('',{
-            //             name : this.writerName,
-            //             message : this.message
-            //         })
-            //          const status = await response.status;
-            //          this.messDone = status >= 200 ? true : false;
-            //          this.messErr = status >= 400 ? true : false;
-              this.isVisible = !this.isVisible;
-              this.writerName = null;
-              this.message = null;
-            //
-            //     }catch(err){
-            //         console.error(err);
-            //     }
+                try{
+                    const response = await axios.post('https://klutherthon316.onrender.com',{
+                        name : this.writerName,
+                        message : this.message
+                    });
+
+                    const status = response.status;
+                    this.messDone = status >= 200 ? true : false;
+                    this.messErr = status >= 400 ? true : false;
+                    this.isVisible = !this.isVisible;
+                    this.writerName = null;
+                    this.message = null;
+    
+                }catch(err){
+                    console.error(err);
+                }
             }
         },
         components:{
