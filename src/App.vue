@@ -41,14 +41,14 @@
     
     data:()=>{
       return{
+        i:0,
+        n:0,
         disPic:heroPic[this.i],
         picInterval:null,
         bgInterval:null,
         disBg:heroBg[this.n].bgPic,
         themeCol:heroBg[this.n].priCol,
         counterCol:null,
-        i:0,
-        n:0,
       }
     },
     mounted(){
