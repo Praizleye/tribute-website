@@ -41,37 +41,42 @@
     
     data:()=>{
       return{
-        disPic:null,
+        disPic:heroPic[this.i],
         picInterval:null,
         bgInterval:null,
-        disBg:null,
-        themeCol:null,
+        disBg:heroBg[this.n].bgPic,
+        themeCol:heroBg[this.n].priCol,
         counterCol:null,
         i:0,
         n:0,
       }
     },
-    beforeMount(){
-      this.disPic = heroPic[this.i];
-      this.disBg = heroBg[this.n].bgPic;
-      this.themeCol = heroBg[this.n].priCol;
-    },
     mounted(){
-      let max = heroPic.length;
-      this.picInterval = setInterval(()=>{
+      
+      setInterval(()=>{
+        changeImg();
+      },7000);
+
+      setInterval(()=>{
+        changeBg();
+      },8000);
+    
+    },
+    methods:{
+      changeImg(){
+        const max = heroPic.length;
         this.i = this.i < max ? this.i + 1 : 0 ;
         this.disPic = heroPic[this.i];
-      },45000);
+      },
 
-      let max2 = heroBg.length;
-      this.bgInterval = setInterval(()=>{
+      changeBg(){
+        const max = heroBg.length;
         this.n = this.n < max2 ? this.n + 1 : 0 ;
         this.disBg = heroBg[this.n].bgPic;
         this.themeCol = heroBg[this.n].priCol;
         this.counterCol = heroBg[this.n].opCol;
-      },17500);
-    
-    },
+      },
+    }
    
   }
 </script>
