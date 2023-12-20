@@ -147,7 +147,7 @@
             async submit(){
                 try{
                     const response = await axios.post('https://klutherthon316.onrender.com/api/tribute',{
-                        name : this.writerName,
+                        fullname : this.writerName,
                         message : this.message
                     });
 
@@ -166,15 +166,15 @@
         components:{
             triCard
         },
-        // beforeMount:{
-        //     // ()=>{
-        //     //     try{
-        //     //         const response = await axios.get('');
-        //     //         this.tributes = response.data;
-        //     //     }catch(err){
-        //     //         console.error(err);
-        //     //     }
-        //     // }
-        // }
+        beforeMount:{
+            // ()=>{
+            //     try{
+            //         const response = await axios.get('');
+            //         this.tributes = response.data;
+            //     }catch(err){
+            //         console.error(err);
+            //     }
+            // }
+        }
     }
 </script>
