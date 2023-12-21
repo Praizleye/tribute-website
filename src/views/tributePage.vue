@@ -10,7 +10,6 @@
                 sorry, tribute unsuccessful
             </h6>
         </div>
-=======
         <div>
             <div class="tributes" v-if="tributes?.data?.length > 0">
                 <div v-for="item in tributes?.data" :key="item._id">
@@ -27,12 +26,10 @@
                 </div>
             </div>
             <div v-else>Loading Tribute Messages ...</div>
->>>>>>> 0491c978dca0930edc557800779488d9a8a6fc0a
         </div>
         <div class="form-wrapper">
             <transition name="fade">
                 <form action="" v-show="isVisible">
-=======
                     <input type="text" name="writer-name" v-model="writerName" placeholder="Please Enter Your Name" id="" />
                     <textarea name="tribute-text" id="" v-model="message" cols="30" row="6"
                         placeholder="Please Enter Tribute"></textarea>
@@ -40,7 +37,6 @@
                 </form>
             </transition>
             <button type="button" @click="isVisible = !isVisible" :class="{ clicked: isVisible }">
->>>>>>> 0491c978dca0930edc557800779488d9a8a6fc0a
                 <span class="title">
                     write tribute
                 </span>
@@ -195,11 +191,6 @@ export default {
         try {
             const response = await axios.get('https://klutherthon316.onrender.com/api/tribute'); // You need to provide a valid URL here
             this.tributes = response.data;
-            // this.tributes = [
-            //     { _id: 1, fullname: "Praise", message: "i dunno what is wrong" },
-            //     { _id: 2, fullname: "Praise Leye", message: "i dunno what is wrong" },
-            //     { _id: 3, fullname: "Praise Vagea", message: "i dunno what is wrong" }
-            // ]
             console.log(this.tributes);
         } catch (err) {
             console.error(err);
