@@ -187,7 +187,7 @@ export default {
     components: {
         triCard
     },
-    mounted: async function () {
+    beforeMount: async function () {
         try {
             const response = await axios.get('https://klutherthon316.onrender.com/api/tribute'); // You need to provide a valid URL here
             this.tributes = response.data;
@@ -196,6 +196,5 @@ export default {
             console.error(err);
         }
     },
-}
 </script>
 
