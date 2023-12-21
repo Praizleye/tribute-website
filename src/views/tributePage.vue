@@ -79,7 +79,7 @@ button[type='submit'] {
     padding: 0.8rem 1.6rem;
     text-transform: uppercase;
     color: var(--text-h);
-    background-color: var(--color-border);
+    background-color: var(--color-border-hover);
     border: 0.3rem solid transparent;
     transition: all 0.5s;
 }
@@ -88,7 +88,7 @@ button[type='button'] {
     padding: 1.6rem;
     border: none;
     color: var(--text-h);
-    background-color: var(--color-border);
+    background-color: var(--color-border-hover);
     text-transform: capitalize;
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@ button[type='button'] {
 
 .clicked {
     color: var(--text-m) !important;
-    border: 0.3rem solid var(--color-border) !important;
+    border: 0.3rem solid var(--color-border-hover) !important;
     background-color: var(--color-background) !important;
     transition: all 0.25s;
 }
@@ -122,7 +122,7 @@ button[type='button'] {
 .err-mess {
     padding: var(--gap);
     color: var(--text-h);
-    background-color: var(--color-border);
+    background-color: var(--color-border-hover);
     border: 0.3rem solid transparent;
     transition: all 0.5s;
     text-align: center;
@@ -195,6 +195,7 @@ export default {
         } catch (err) {
             console.error(err);
         }
-    },
+    }
+}
 </script>
 
