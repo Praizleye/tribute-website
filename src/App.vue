@@ -28,8 +28,8 @@
   </header>
   <main>
     <div class="links">
-      <RouterLink to="/bio" class="tab" >Bio</RouterLink>
-      <RouterLink to="/tribute"  class="tab" >Tributes</RouterLink>
+      <RouterLink to="/bio" class="tab" > <h6>Bio</h6></RouterLink>
+      <RouterLink to="/tribute"  class="tab" ><h6>Tributes</h6></RouterLink>
     </div>
     <RouterView></RouterView>
   </main>

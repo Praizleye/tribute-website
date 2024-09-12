@@ -23,7 +23,7 @@
         font-weight:400;
     }
     h6{
-        font-weight:100;
+        font-weight:300;
         text-transform:uppercase;
         color:var(--text-h);
     }
